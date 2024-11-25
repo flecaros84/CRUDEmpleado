@@ -14,5 +14,6 @@ Para hacerlo funcionar se requiere:
 3. Instalar XAMPP con funcionalidades Apache y Mysql
 4. Crear una base de datos bdempleados en Mysql: https://github.com/JoseCastro94/recursos-youtube-crud-javaweb/blob/master/1.%20SCRIPT%20BD/script.sql
 5. Verificar que el archivo Source Packages/config/Conexion.java tenga las credenciales correctas de su Mysql
-6. Iniciar como administrador el ApacheNetBeans cuando corran la aplicación
-7. Para ejecutar el programa, en el menu de navegación deben hacer click derecho en index.html y "Run File"
+6. Iniciar XAMPP con funcionalidades Apache y Mysql
+7. Iniciar como administrador el ApacheNetBeans cuando corran la aplicación
+8. Para ejecutar el programa, en el menu de navegación deben hacer click derecho en index.html y "Run File"
