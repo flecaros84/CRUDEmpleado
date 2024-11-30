@@ -16,4 +16,4 @@ Para hacerlo funcionar se requiere:
 5. Verificar que el archivo Source Packages/config/Conexion.java tenga las credenciales correctas de su Mysql
 6. Iniciar XAMPP con funcionalidades Apache y Mysql
 7. Iniciar como administrador el ApacheNetBeans cuando corran la aplicación
-8. Para ejecutar el programa, en el menu de navegación deben hacer click derecho en index.html y "Run File"
+8. Para ejecutar el programa, en el menu de navegación deben hacer click derecho en scr/main/webapp/index.jsp y "Run File"

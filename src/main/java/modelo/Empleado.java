@@ -10,6 +10,7 @@ public class Empleado {
     private String apellidos;      // Apellido(s) del empleado.
     private String fechaIngreso;   // Fecha en la que el empleado ingresó a la organización.
     private double sueldo;         // Sueldo del empleado.
+    private String especialidad;   // Especialidad del empleado
 
     // Método público para obtener el valor del atributo "id".
     public int getId() {
@@ -60,5 +61,13 @@ public class Empleado {
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
-}
 
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+}

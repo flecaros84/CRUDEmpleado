@@ -27,8 +27,11 @@
     </head>
     <body>
         <div class="container mt-3">
+            <!-- Agregar el logotipo al inicio del contenedor -->
+            <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo" class="img-fluid mb-3" style="max-width: 300px;">
+            <!-- Clase "img-fluid" para ajustar el tamaño automáticamente y margen inferior para espaciado -->
             <!-- Contenedor principal con margen superior para organizar el contenido. -->
-            <h3>Gest. Empleados</h3>
+            <h3>Lista de Empleados</h3>
             <!-- Encabezado principal de la página. -->
             <hr />
             <!-- Línea horizontal separadora. -->
@@ -53,6 +56,7 @@
                         <th>Apellidos</th>
                         <th>Fecha Ingreso</th>
                         <th>Sueldo</th>
+                        <th>Especialidad</th>
                         <th>Accion</th>
                     </tr>
                 </thead>
@@ -70,6 +74,8 @@
                             <!-- Muestra la fecha de ingreso del empleado. -->
                             <td>${item.sueldo}</td>
                             <!-- Muestra el sueldo del empleado. -->
+                            <td>${item.especialidad}</td>
+                            <!-- Muestra la especialidad del empleado. -->
                             <td> 
                                 <!-- Botón para editar al empleado. -->
                                 <a href="EmpleadoControlador?accion=editar&id=${item.id}" 

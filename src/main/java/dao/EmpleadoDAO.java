@@ -35,6 +35,7 @@ public class EmpleadoDAO {
                 obj.setApellidos(rs.getString("apellidos")); // Asigna el apellido.
                 obj.setFechaIngreso(rs.getString("fecha_ingreso")); // Asigna la fecha de ingreso.
                 obj.setSueldo(rs.getDouble("sueldo")); // Asigna el sueldo.
+                obj.setEspecialidad(rs.getString("especialidad")); // Asigna especialidad
                 lista.add(obj); // Agrega el empleado a la lista.
             }
 
@@ -60,12 +61,13 @@ public class EmpleadoDAO {
         try {
             cn = Conexion.getConnection(); // Obtiene la conexión a la base de datos.
             // Consulta SQL para insertar un nuevo empleado.
-            String sql = "INSERT INTO empleado(nombres,apellidos,fecha_ingreso,sueldo) VALUES(?,?,?,?)";
+            String sql = "INSERT INTO empleado(nombres,apellidos,fecha_ingreso,sueldo,especialidad) VALUES(?,?,?,?,?)";
             ps = cn.prepareStatement(sql); // Prepara la consulta SQL.
             ps.setString(1, obj.getNombres()); // Asigna el nombre.
             ps.setString(2, obj.getApellidos()); // Asigna el apellido.
             ps.setString(3, obj.getFechaIngreso()); // Asigna la fecha de ingreso.
             ps.setDouble(4, obj.getSueldo()); // Asigna el sueldo.
+            ps.setString(5, obj.getEspecialidad()); //Asigna especialidad
 
             result = ps.executeUpdate(); // Ejecuta la consulta y almacena el resultado.
 
@@ -99,6 +101,7 @@ public class EmpleadoDAO {
                 obj.setApellidos(rs.getString("apellidos")); // Asigna el apellido.
                 obj.setFechaIngreso(rs.getString("fecha_ingreso")); // Asigna la fecha de ingreso.
                 obj.setSueldo(rs.getDouble("sueldo")); // Asigna el sueldo.
+                obj.setEspecialidad(rs.getString("especialidad")); //Asigna especialidad
             }
 
         } catch (Exception ex) {
@@ -121,13 +124,14 @@ public class EmpleadoDAO {
         try {
             cn = Conexion.getConnection(); // Obtiene la conexión a la base de datos.
             // Consulta SQL para actualizar un empleado.
-            String sql = "UPDATE empleado SET nombres=?, apellidos=?, fecha_ingreso=?, sueldo=? WHERE id=?";
+            String sql = "UPDATE empleado SET nombres=?, apellidos=?, fecha_ingreso=?, sueldo=?, especialidad=? WHERE id=?";
             ps = cn.prepareStatement(sql); // Prepara la consulta.
             ps.setString(1, obj.getNombres()); // Asigna el nombre.
             ps.setString(2, obj.getApellidos()); // Asigna el apellido.
             ps.setString(3, obj.getFechaIngreso()); // Asigna la fecha de ingreso.
             ps.setDouble(4, obj.getSueldo()); // Asigna el sueldo.
-            ps.setInt(5, obj.getId()); // Asigna el ID.
+            ps.setString(5, obj.getEspecialidad()); //Asigna especialidad
+            ps.setInt(6, obj.getId()); // Asigna el ID.
 
             result = ps.executeUpdate(); // Ejecuta la consulta y almacena el resultado.
 

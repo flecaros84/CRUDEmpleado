@@ -90,6 +90,7 @@ public class EmpleadoControlador extends HttpServlet {
         obj.setApellidos(request.getParameter("apellidos"));
         obj.setFechaIngreso(request.getParameter("fechaIngreso"));
         obj.setSueldo(Double.parseDouble(request.getParameter("sueldo")));
+        obj.setEspecialidad(request.getParameter("especialidad"));
 
         int result;
 

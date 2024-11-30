@@ -74,6 +74,20 @@
                             <!-- Campo numérico para ingresar el sueldo del empleado, requerido. -->
                         </div>
                         <div class="mb-3">
+                            <label>Especialidad:</label>
+                            <!-- Etiqueta para el campo de especialidad -->
+                            <select name="especialidad" class="form-control" required>
+                                <!-- Campo select con las opciones -->
+                                <option value="" disabled ${empleado.especialidad == null ? 'selected' : ''}>Seleccione una especialidad</option>
+                                <option value="Medicina General" ${empleado.especialidad == 'Medicina General' ? 'selected' : ''}>Medicina General</option>
+                                <option value="Pediatría" ${empleado.especialidad == 'Pediatría' ? 'selected' : ''}>Pediatría</option>
+                                <option value="Cardiología" ${empleado.especialidad == 'Cardiología' ? 'selected' : ''}>Cardiología</option>
+                                <option value="Odontología" ${empleado.especialidad == 'Odontología' ? 'selected' : ''}>Odontología</option>
+                                <option value="Ginecología" ${empleado.especialidad == 'Ginecología' ? 'selected' : ''}>Ginecología</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
                             <!-- Campo oculto para enviar el ID del empleado al controlador. -->
                             <input type="hidden" name="id" value="${empleado.id}">
                             <!-- Campo oculto para indicar que la acción a realizar es "guardar". -->
